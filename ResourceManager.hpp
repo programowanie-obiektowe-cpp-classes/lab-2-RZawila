@@ -6,17 +6,14 @@ class ResourceManager
 {
 public:
     ResourceManager(){}; // konstruktor
-    ~ResourceManager() // destruktor?
-    {
-    delete A;//?
-    }
+    ~ResourceManager(){}; // destruktor?
     ResourceManager(const ResourceManager& rm1) = default;// konstruktor kopiujacy
-    ResourceManager(const ResourceManager&& rm2) = default;// konstruktor przenosz¹cy
+    ResourceManager(ResourceManager&& rm2) = default;// konstruktor przenosz¹cy
     double get()
     {
         return A.get();
-    }
+    };
 
 private:
-    Resource() A;// classa ktora ma zarzadzac
+    Resource A;// classa ktora ma zarzadzac
 };
