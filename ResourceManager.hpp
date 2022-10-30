@@ -15,7 +15,7 @@ public:
         delete A;
     }; // destruktor?
 
-    ResourceManager(const ResourceManager& rm1) = default;// konstruktor kopiujacy, defaultowy jak w intsrukcji
+    ResourceManager(const ResourceManager& rm1) : A{rm1.A} {};// konstruktor kopiujacy
 
     ResourceManager& operator=(const ResourceManager& rm2)
     {
