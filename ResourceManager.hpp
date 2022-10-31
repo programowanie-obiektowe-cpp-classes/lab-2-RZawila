@@ -15,9 +15,14 @@ public:
         delete A;
     }; // destruktor?
 
-    ResourceManager(const ResourceManager& rm1) : A{rm1.A} {};// konstruktor kopiujacy
+    ResourceManager(const ResourceManager& rm1)
+    {
+            delete A;
+            A = new Resource{*rm1.A};
 
-    ResourceManager& operator=(const ResourceManager& rm2)
+    };// konstruktor kopiujacy
+
+    ResourceManager& operator=(const ResourceManager& rm2)// konstruktor kopujacy przypisania?
     {
         if(&rm2 != this)
         {
