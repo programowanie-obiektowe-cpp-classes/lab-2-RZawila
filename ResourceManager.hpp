@@ -17,7 +17,7 @@ public:
 
     ResourceManager(const ResourceManager& rm1)
     {
-            delete A;
+
             A = new Resource{*rm1.A};
 
     };// konstruktor kopiujacy
